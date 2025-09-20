@@ -19,7 +19,7 @@ baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "https://lingzhi-yu.github.io"
 
 # add this line (top-level, not indented under something else)
-# custom_css: "/assets/css/custom.css"
+custom_css: "/assets/css/custom.css"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
