@@ -8,8 +8,8 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-site_theme               : "default" # Currently available options are "default", "air"
-title                    : "Home"
+site_theme               : "air" # Currently available options are "default", "air"
+# title                    : "Home"
 # title_separator          : "-"
 name                     : &name "Your Name"
 description              : &description "LingHi Yu Web"   # Update this with a general description of your site, this is the default if not overridden by a page
