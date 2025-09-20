@@ -1,46 +1,46 @@
-/* ===========================
-   Global text font color
-=========================== */
-body {
-  color: #BF5700;  /* UT Austin burnt orange */
+/* =========================
+   Profile photo border color
+========================= */
+.author__avatar img {
+  border: 4px solid #BF5700 !important;   /* UT burnt orange */
+  border-radius: 50%;
+  padding: 2px;
+  box-shadow: none !important;
 }
 
-/* Headings also in burnt orange */
-h1, h2, h3, h4, h5, h6 {
-  color: #BF5700;
+html[data-theme="dark"] .author__avatar img {
+  border: 4px solid #BF5700 !important;
+  box-shadow: none !important;
 }
 
-/* ===========================
-   Lines (header & footer)
-=========================== */
+/* =========================
+   Nav bar link color
+========================= */
+.nav__list a {
+  color: #BF5700 !important;   /* UT burnt orange */
+}
+
+.nav__list a:hover {
+  color: #a94400 !important;   /* darker burnt orange hover */
+}
+
+html[data-theme="dark"] .nav__list a {
+  color: #BF5700 !important;
+}
+
+/* =========================
+   Top and bottom separator lines
+========================= */
 .masthead {
-  border-bottom: 2px solid #BF5700;  /* burnt orange */
+  border-bottom: 2px solid #BF5700 !important;
 }
 
 .page__footer {
-  border-top: 2px solid #BF5700;  /* burnt orange */
+  border-top: 2px solid #BF5700 !important;
 }
 
-/* ===========================
-   Dark theme overrides
-=========================== */
-html[data-theme="dark"] body {
-  color: #BF5700;  /* burnt orange font even in dark mode */
-}
-
-html[data-theme="dark"] h1, 
-html[data-theme="dark"] h2, 
-html[data-theme="dark"] h3, 
-html[data-theme="dark"] h4, 
-html[data-theme="dark"] h5, 
-html[data-theme="dark"] h6 {
-  color: #BF5700;
-}
-
-html[data-theme="dark"] .masthead {
-  border-bottom: 2px solid #BF5700;
-}
-
+/* Prevent extra white line in dark mode */
+html[data-theme="dark"] .masthead,
 html[data-theme="dark"] .page__footer {
-  border-top: 2px solid #BF5700;
+  border-color: #BF5700 !important;
 }
