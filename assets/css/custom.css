@@ -1,46 +1,60 @@
 /* =========================
-   Profile photo border color
+   1) Profile photo border
 ========================= */
-.author__avatar img {
-  border: 4px solid #BF5700 !important;   /* UT burnt orange */
+.author__avatar img,
+.author__avatar .u-photo {             /* some builds add class="u-photo" */
+  border: 4px solid #BF5700 !important;
   border-radius: 50%;
   padding: 2px;
   box-shadow: none !important;
 }
-
-html[data-theme="dark"] .author__avatar img {
+html[data-theme="dark"] .author__avatar img,
+html[data-theme="dark"] .author__avatar .u-photo {
   border: 4px solid #BF5700 !important;
-  box-shadow: none !important;
 }
 
 /* =========================
-   Nav bar link color
+   2) Nav link color (Home / Research / ...)
 ========================= */
-.nav__list a {
-  color: #BF5700 !important;   /* UT burnt orange */
+.greedy-nav .visible-links > li > a,
+.greedy-nav .hidden-links > li > a,
+.masthead .site-title a {
+  color: #BF5700 !important;
 }
-
-.nav__list a:hover {
-  color: #a94400 !important;   /* darker burnt orange hover */
+.greedy-nav .visible-links > li > a:hover,
+.greedy-nav .hidden-links > li > a:hover,
+.greedy-nav .visible-links > li.active > a,
+.greedy-nav .hidden-links > li.active > a {
+  color: #9B4500 !important;            /* darker on hover/active */
+  text-decoration: none;
 }
-
-html[data-theme="dark"] .nav__list a {
+html[data-theme="dark"] .greedy-nav .visible-links > li > a,
+html[data-theme="dark"] .greedy-nav .hidden-links > li > a,
+html[data-theme="dark"] .masthead .site-title a {
   color: #BF5700 !important;
 }
 
 /* =========================
-   Top and bottom separator lines
+   3) Top and bottom separator lines
 ========================= */
-.masthead {
-  border-bottom: 2px solid #BF5700 !important;
+/* Your single burnt-orange line under the header */
+.masthead { border-bottom: 2px solid #BF5700 !important; }
+
+/* Remove the extra “white line” that actually comes from a box-shadow */
+.greedy-nav {
+  box-shadow: none !important;
+  border-bottom: none !important;
 }
 
-.page__footer {
-  border-top: 2px solid #BF5700 !important;
-}
+/* Burnt-orange footer line */
+.page__footer { border-top: 2px solid #BF5700 !important; }
 
-/* Prevent extra white line in dark mode */
+/* Dark mode: keep the same colors */
 html[data-theme="dark"] .masthead,
 html[data-theme="dark"] .page__footer {
   border-color: #BF5700 !important;
+}
+html[data-theme="dark"] .greedy-nav {
+  box-shadow: none !important;
+  border-bottom: none !important;
 }
