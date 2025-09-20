@@ -1,11 +1,16 @@
-/* Footer with UT Austin Burnt Orange */
+/* Burnt Orange Footer */
 .page__footer {
-  background-color: #BF5700;  /* UT Austin burnt orange */
-  color: #ffffff;             /* white text */
+  background-color: #BF5700;
+  color: #ffffff;
 }
-
-/* Links in footer */
 .page__footer a {
-  color: #ffffff;             /* keep links white */
+  color: #ffffff;
   font-weight: bold;
+}
+/* Burnt Orange Header/Nav */
+.masthead, .greedy-nav {
+  background-color: #BF5700;
+}
+.masthead a, .greedy-nav a {
+  color: #ffffff !important;
 }
