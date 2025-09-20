@@ -2,8 +2,8 @@
    1) Profile photo border
 ========================= */
 .author__avatar img,
-.author__avatar .u-photo {             /* some builds add class="u-photo" */
-  border: 4px solid #BF5700 !important;
+.author__avatar .u-photo {
+  border: 4px solid #BF5700 !important;   /* UT burnt orange */
   border-radius: 50%;
   padding: 2px;
   box-shadow: none !important;
@@ -14,47 +14,53 @@ html[data-theme="dark"] .author__avatar .u-photo {
 }
 
 /* =========================
-   2) Nav link color (Home / Research / ...)
+   2) NAV LINKS (Home / Publications / Research / Teaching / Contact)
+   Force burnt orange in both modes
 ========================= */
-.greedy-nav .visible-links > li > a,
-.greedy-nav .hidden-links > li > a,
-.masthead .site-title a {
+.masthead .greedy-nav .visible-links > li > a,
+.masthead .greedy-nav .hidden-links > li > a,
+.masthead .site-title a,
+.masthead .site-title a:visited {
   color: #BF5700 !important;
 }
-.greedy-nav .visible-links > li > a:hover,
-.greedy-nav .hidden-links > li > a:hover,
-.greedy-nav .visible-links > li.active > a,
-.greedy-nav .hidden-links > li.active > a {
-  color: #9B4500 !important;            /* darker on hover/active */
+.masthead .greedy-nav .visible-links > li > a:hover,
+.masthead .greedy-nav .hidden-links > li > a:hover,
+.masthead .greedy-nav .visible-links > li.active > a,
+.masthead .greedy-nav .hidden-links > li.active > a {
+  color: #9B4500 !important; /* darker on hover/active */
   text-decoration: none;
 }
-html[data-theme="dark"] .greedy-nav .visible-links > li > a,
-html[data-theme="dark"] .greedy-nav .hidden-links > li > a,
-html[data-theme="dark"] .masthead .site-title a {
+
+/* Dark-mode nav color too */
+html[data-theme="dark"] .masthead .greedy-nav .visible-links > li > a,
+html[data-theme="dark"] .masthead .greedy-nav .hidden-links > li > a,
+html[data-theme="dark"] .masthead .site-title a,
+html[data-theme="dark"] .masthead .site-title a:visited {
   color: #BF5700 !important;
 }
 
 /* =========================
-   3) Top and bottom separator lines
+   3) TOP & BOTTOM LINES
+   Keep one burnt-orange line; remove the extra white one
 ========================= */
-/* Your single burnt-orange line under the header */
+/* your single line under the header */
 .masthead { border-bottom: 2px solid #BF5700 !important; }
 
-/* Remove the extra “white line” that actually comes from a box-shadow */
+/* kill greedy-nav's extra line (box-shadow/border) */
 .greedy-nav {
   box-shadow: none !important;
-  border-bottom: none !important;
+  border-bottom: 0 !important;
+  background-image: none !important;
 }
 
-/* Burnt-orange footer line */
+/* footer line */
 .page__footer { border-top: 2px solid #BF5700 !important; }
 
-/* Dark mode: keep the same colors */
-html[data-theme="dark"] .masthead,
-html[data-theme="dark"] .page__footer {
-  border-color: #BF5700 !important;
-}
+/* dark-mode: same rules */
+html[data-theme="dark"] .masthead { border-bottom: 2px solid #BF5700 !important; }
 html[data-theme="dark"] .greedy-nav {
   box-shadow: none !important;
-  border-bottom: none !important;
+  border-bottom: 0 !important;
+  background-image: none !important;
 }
+html[data-theme="dark"] .page__footer { border-top: 2px solid #BF5700 !important; }
