@@ -1,93 +1,37 @@
-html[data-theme="dark"] {
-  --global-bg-color: #fff !important;
-  --global-text-color: #000 !important;
-  background: #fff !important;
-  color: #000 !important;
-}
+---
+title: ""                         # hide big page header
+permalink: /research/
+layout: archive
+author_profile: true
+entries_layout: list
+show_excerpts: true
+classes: hide-title
+---
 
-#theme-toggle { display: none !important; }
+{% include base_path %}
 
-/* =========================
-   1) Profile photo border
-========================= */
-.author__avatar img,
-.author__avatar .u-photo {
-  border: 4px solid #BF5700 !important;   /* UT burnt orange */
-  border-radius: 50%;
-  padding: 2px;
-  box-shadow: none !important;
-}
-html[data-theme="dark"] .author__avatar img,
-html[data-theme="dark"] .author__avatar .u-photo {
-  border: 4px solid #BF5700 !important;
-}
+## Publications
+{% assign pubs = site.research | where_exp: "item", "item.categories contains 'publications'" | sort: "date" | reverse %}
+{% for post in pubs %}
+{% include archive-single.html %}
+{% endfor %}
 
-/* =========================
-   2) NAV LINKS
-========================= */
-.masthead .greedy-nav .visible-links > li > a,
-.masthead .greedy-nav .hidden-links > li > a,
-.masthead .site-title a,
-.masthead .site-title a:visited {
-  color: #BF5700 !important;
-}
-.masthead .greedy-nav .visible-links > li > a:hover,
-.masthead .greedy-nav .hidden-links > li > a:hover,
-.masthead .greedy-nav .visible-links > li.active > a,
-.masthead .greedy-nav .hidden-links > li.active > a {
-  color: #9B4500 !important;
-  text-decoration: none;
-}
-html[data-theme="dark"] .masthead .greedy-nav .visible-links > li > a,
-html[data-theme="dark"] .masthead .greedy-nav .hidden-links > li > a,
-html[data-theme="dark"] .masthead .site-title a,
-html[data-theme="dark"] .masthead .site-title a:visited {
-  color: #BF5700 !important;
-}
+---
 
-/* =========================
-   3) TOP & BOTTOM LINES
-========================= */
-.masthead { border-bottom: 2px solid #BF5700 !important; }
-.greedy-nav { box-shadow: none !important; border-bottom: 0 !important; background-image: none !important; }
-.page__footer { border-top: 2px solid #BF5700 !important; }
-html[data-theme="dark"] .masthead { border-bottom: 2px solid #BF5700 !important; }
-html[data-theme="dark"] .greedy-nav { box-shadow: none !important; border-bottom: 0 !important; background-image: none !important; }
-html[data-theme="dark"] .page__footer { border-top: 2px solid #BF5700 !important; }
+## Working Papers
+<div class="nolink-titles">
+{% assign wps = site.research | where_exp: "item", "item.categories contains 'working-papers'" | sort: "date" | reverse %}
+{% for post in wps %}
+{% include archive-single.html %}
+{% endfor %}
+</div>
 
-/* =========================
-   4) Research titles (no underline anywhere)
-   Publications can still be clickable; see Section 7 for disabling in WP/WIP.
-========================= */
-.archive__item-title a,
-.archive__item-title a:visited,
-.archive__item-title a:hover,
-.archive__item-title a:focus {
-  text-decoration: none !important;
-  box-shadow: none !important;      /* Minimal Mistakes uses box-shadow for underline */
-  border-bottom: none !important;
-  color: inherit;
-}
+---
 
-/* =========================
-   5) Hide page title on Research page (backup)
-========================= */
-.page.hide-title .page__title { display: none; }
-
-/* =========================
-   6) Hide published date + icon on Research archive
-========================= */
-.page__meta,
-.page__meta time,
-.page__meta .fas.fa-fw.fa-calendar-alt {
-  display: none !important;
-}
-
-/* =========================
-   7) Make titles NON-CLICKABLE inside Working Papers & WIP
-   (wrapped with <div class="nolink-titles"> in research.md)
-========================= */
-.nolink-titles .archive__item-title a {
-  pointer-events: none;
-  cursor: default;
-}
+## Selected Work in Progress
+<div class="nolink-titles">
+{% assign wip = site.research | where_exp: "item", "item.categories contains 'wip'" | sort: "date" | reverse %}
+{% for post in wip %}
+{% include archive-single.html %}
+{% endfor %}
+</div>
