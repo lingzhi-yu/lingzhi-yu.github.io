@@ -1,0 +1,52 @@
+{%- comment -%}
+  Card used on the Research list. It mirrors Minimal Mistakes’ archive card,
+  but the title is NOT a link. Pass the post explicitly: {% include archive-single-no-title-link.html post=post %}
+{%- endcomment -%}
+
+{%- assign p = include.post | default: post -%}
+
+<article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+
+  {%- if p.header.teaser -%}
+    <div class="archive__item-teaser">
+      <img src="{{ p.header.teaser | relative_url }}" alt="">
+    </div>
+  {%- endif -%}
+
+  <div class="archive__item-body">
+
+    {%- if p.title -%}
+      <h2 class="archive__item-title" itemprop="headline">{{ p.title }}</h2>
+    {%- endif -%}
+
+    {%- comment -%} Optional “venue” / authors line {%- endcomment -%}
+    {%- if p.authors or p.venue or p.date -%}
+      <p class="page__meta">
+        {%- if p.date -%}
+          <i class="far fa-calendar-alt" aria-hidden="true"></i>
+          <span>{{ p.date | date: "%B %d, %Y" }}</span>
+        {%- endif -%}
+        {%- if p.venue -%}
+          <span> • {{ p.venue }}</span>
+        {%- endif -%}
+        {%- if p.authors -%}
+          <span> • {{ p.authors }}</span>
+        {%- endif -%}
+      </p>
+    {%- endif -%}
+
+    {%- if p.excerpt -%}
+      <p class="archive__item-excerpt" itemprop="description">{{ p.excerpt | markdownify | strip_html }}</p>
+    {%- endif -%}
+
+    {%- if p.links and p.links.size > 0 -%}
+      <p class="archive__item-excerpt">
+        {%- for l in p.links -%}
+          <a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.name }}</a>
+          {%- unless forloop.last -%} &nbsp;|&nbsp; {%- endunless -%}
+        {%- endfor -%}
+      </p>
+    {%- endif -%}
+
+  </div>
+</article>
