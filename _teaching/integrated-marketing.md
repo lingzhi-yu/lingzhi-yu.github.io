@@ -1,13 +1,6 @@
 ---
 title: "Integrated Marketing Communications"
 collection: teaching
+excerpt: |
+  with Prof. Wayne Hoyer, Spring 2025
 ---
-with Prof. Wayne Hoyer, Spring 2025
-
-Heading 1
-======
-
-Heading 2
-======
-Heading 3
-======
