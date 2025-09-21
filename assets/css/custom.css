@@ -71,16 +71,15 @@ html[data-theme="dark"] .greedy-nav {
 html[data-theme="dark"] .page__footer { border-top: 2px solid #BF5700 !important; }
 
 /* =========================
-   4) RESEARCH TITLES
-   Make archive/list titles plain, not links
+   4) RESEARCH TITLES (clickable, but no underline)
+   We DO NOT disable pointer events so titles remain links.
 ========================= */
-.archive__item-title a {
-  pointer-events: none;            /* disable clicking */
-  text-decoration: none !important;
-  box-shadow: none !important;     /* remove Minimal Mistakes underline */
+.archive__item-title a,
+.archive__item-title a:visited {
+  text-decoration: none !important;   /* remove underline */
+  box-shadow: none !important;        /* Minimal Mistakes link underline uses box-shadow */
   border-bottom: none !important;
-  color: inherit;
-  cursor: default;
+  color: inherit;                      /* keep normal text color */
 }
 .archive__item-title a:hover,
 .archive__item-title a:focus {
