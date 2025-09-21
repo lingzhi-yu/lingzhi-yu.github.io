@@ -72,19 +72,19 @@ html[data-theme="dark"] .page__footer { border-top: 2px solid #BF5700 !important
 
 /* =========================
    4) RESEARCH TITLES
-   Make archive/list titles plain, not links and remove underline/shadow
+   Make archive/list titles plain, not links
 ========================= */
 .archive__item-title a {
   pointer-events: none;            /* disable clicking */
-  text-decoration: none;           /* remove default underline */
-  box-shadow: none !important;     /* Minimal Mistakes link underline uses box-shadow */
+  text-decoration: none !important;
+  box-shadow: none !important;     /* remove Minimal Mistakes underline */
   border-bottom: none !important;
   color: inherit;
   cursor: default;
 }
 .archive__item-title a:hover,
 .archive__item-title a:focus {
-  text-decoration: none;
+  text-decoration: none !important;
   box-shadow: none !important;
   border-bottom: none !important;
 }
@@ -93,3 +93,12 @@ html[data-theme="dark"] .page__footer { border-top: 2px solid #BF5700 !important
    5) HIDE PAGE TITLE ON RESEARCH PAGE (backup)
 ========================= */
 .page.hide-title .page__title { display: none; }
+
+/* =========================
+   6) HIDE PUBLISHED DATE + ICON ON RESEARCH ARCHIVE
+========================= */
+.page__meta,
+.page__meta time,
+.page__meta .fas.fa-fw.fa-calendar-alt {
+  display: none !important;
+}
