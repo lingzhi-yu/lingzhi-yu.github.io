@@ -10,11 +10,11 @@ header:
 excerpt: |
   This work investigates how loneliness (human-side factor) and robot dominance (robot-side factor)
   shape people’s attitudes toward adopting companion robots. Across six studies, we show that
-  greater loneliness generally lowers adoption attitudes toward robotic companionship, yet
-  lonelier individuals display a stronger inclination to bond with **submissive** (vs. dominant) robots.
+  greater loneliness generally lowers adoption attitudes toward robotic companionship, yet lonelier
+  individuals display a stronger inclination to bond with **submissive** (vs. dominant) robots.
 links:
   - name: "[paper]"
-    url: https://doi.org/10.1002/mar.21975    # replace with your real DOI or a PDF link
+    url: https://doi.org/10.1002/mar.21975   # replace with your real DOI or PDF
 ---
 
 This work contributes to answering the question of when the lonely (vs. non-lonely) would be more or less likely
