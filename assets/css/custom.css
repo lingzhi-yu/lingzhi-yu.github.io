@@ -121,3 +121,22 @@ html[data-theme="dark"] .page__footer { border-top: 2px solid #BF5700 !important
   margin-top: 0 !important;             /* ensure first paragraph has no top margin */
 }
 
+
+
+
+/* =========================
+   Publications: remove gap under title
+   (archive-single.html outputs <p class="archive__item-excerpt">)
+========================= */
+.archive .archive__item-title { 
+  margin-bottom: 0 !important;
+}
+.archive .archive__item-title + p.archive__item-excerpt {
+  margin-top: 0 !important;
+}
+/* safety for any nested structure */
+.archive p.archive__item-excerpt:first-child,
+.archive .archive__item-excerpt > p:first-child {
+  margin-top: 0 !important;
+}
+
