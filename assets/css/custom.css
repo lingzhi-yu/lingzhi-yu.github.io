@@ -82,6 +82,8 @@ html[data-theme="dark"] .page__footer { border-top: 2px solid #BF5700 !important
 .archive .page__meta .fas.fa-fw.fa-calendar-alt {
   display: none !important;
 }
+/* also zero out margins so they can't collapse and create space */
+.archive .page__meta { margin: 0 !important; padding: 0 !important; }
 
 /* =========================
    7) Make titles NON-CLICKABLE inside Working Papers & WIP
@@ -103,18 +105,30 @@ html[data-theme="dark"] .page__footer { border-top: 2px solid #BF5700 !important
 }
 
 /* =========================
-   9) Remove gap under archive titles (ALL sections, incl. Publications)
-   Works whether excerpt is a <p> or a <div>
+   9) Remove gap under titles (ALL sections, incl. Publications)
+   Works whether excerpt is a <p> or a <div>, and whether .page__meta exists.
 ========================= */
 .archive article .archive__item-title {
   margin-bottom: 0 !important;
   padding-bottom: 0 !important;
 }
-.archive article .archive__item-title + * {
-  margin-top: 0 !important;          /* catch p.archive__item-excerpt or div.archive__item-excerpt */
+
+/* If the theme inserts .page__meta after the title, kill its spacing */
+.archive article .archive__item-title + .page__meta {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* No top margin on the first content element after the title (covers p or div) */
+.archive article .archive__item-title + .archive__item-excerpt,
+.archive article .archive__item-title + p.archive__item-excerpt,
+.archive article .archive__item-title + .page__meta + .archive__item-excerpt,
+.archive article .archive__item-title + .page__meta + p.archive__item-excerpt {
+  margin-top: 0 !important;
   padding-top: 0 !important;
 }
-/* extra safety for first paragraph inside excerpt containers */
+
+/* Extra safety: first paragraph inside any excerpt container */
 .archive article .archive__item-excerpt > p:first-child {
   margin-top: 0 !important;
 }
