@@ -91,3 +91,20 @@ html[data-theme="dark"] .page__footer { border-top: 2px solid #BF5700 !important
   pointer-events: none;
   cursor: default;
 }
+
+/* =========================
+   8) Normalize font size in Working Papers / WIP excerpts
+   (and keep consistent with main body text)
+========================= */
+.archive__item .archive__item-excerpt,
+.archive__item .archive__item-excerpt p,
+.archive__item .archive__item-excerpt li {
+  font-size: 1rem !important;   /* same as body text */
+  line-height: 1.6;              /* comfortable reading */
+}
+
+/* tighten spacing between title and the first line under it */
+.archive__item-title + .archive__item-excerpt {
+  margin-top: 0.35rem;
+}
+
