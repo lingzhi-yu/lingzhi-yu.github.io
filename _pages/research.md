@@ -1,9 +1,10 @@
 ---
-layout: page
-title: "Research"
 permalink: /research/
+title: "Research"
+layout: archive
 author_profile: true
 ---
+
 
 Welcome to my Research page. Here you’ll find **Publications**, **Working Papers**, and **Work in Progress**.
 
