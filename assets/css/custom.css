@@ -108,3 +108,16 @@ html[data-theme="dark"] .page__footer { border-top: 2px solid #BF5700 !important
   margin-top: 0.35rem;
 }
 
+/* =========================
+   Remove gap under archive titles (e.g., Publications)
+========================= */
+.archive__item-title { 
+  margin-bottom: 0 !important;          /* kill h2 bottom margin */
+}
+.archive__item-title + .archive__item-excerpt {
+  margin-top: 0 !important;             /* kill excerpt top margin */
+}
+.archive__item-title + .archive__item-excerpt p:first-child {
+  margin-top: 0 !important;             /* ensure first paragraph has no top margin */
+}
+
