@@ -74,15 +74,26 @@ html[data-theme="dark"] .greedy-nav {
 }
 html[data-theme="dark"] .page__footer { border-top: 2px solid #BF5700 !important; }
 
-
 /* =========================
    4) RESEARCH TITLES
-   Make archive/list titles plain, not links
+   Make archive/list titles plain, not links and remove underline
 ========================= */
 .archive__item-title a {
-  pointer-events: none;   /* disable clicking */
-  text-decoration: none;  /* remove underline */
-  color: inherit;         /* inherit normal text color */
-  cursor: default;        /* plain cursor */
+  pointer-events: none;            /* disable clicking */
+  text-decoration: none;           /* remove default underline */
+  box-shadow: none !important;     /* Minimal Mistakes adds link underline via box-shadow */
+  border-bottom: none !important;  /* belt-and-suspenders */
+  color: inherit;                  /* normal text color */
+  cursor: default;                 /* plain cursor */
+}
+.archive__item-title a:hover,
+.archive__item-title a:focus {
+  text-decoration: none;
+  box-shadow: none !important;
+  border-bottom: none !important;
 }
 
+/* =========================
+   5) HIDE PAGE TITLE ON RESEARCH PAGE (backup)
+========================= */
+.page.hide-title .page__title { display: none; }
