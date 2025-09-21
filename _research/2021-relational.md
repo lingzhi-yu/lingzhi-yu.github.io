@@ -2,9 +2,7 @@
 title: "Reason versus feeling: relational norms influence gift choices"
 collection: research
 categories: [publications]
-
 link: "https://doi.org/10.1108/APJML-02-2020-0122"
-
 excerpt: |
   with Tingting Zhao and Xiucheng Fan (2021), *Asia Pacific Journal of Marketing and Logistics, 33*(8), 1723-1742  
  
