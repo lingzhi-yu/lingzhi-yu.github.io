@@ -1,10 +1,9 @@
 ---
 permalink: /research/
 title: "Research"
-layout: archive
+layout: page
 author_profile: true
 ---
-
 
 Welcome to my Research page. Here you’ll find **Publications**, **Working Papers**, and **Work in Progress**.
 
