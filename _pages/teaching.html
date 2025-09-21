@@ -1,12 +1,22 @@
 ---
 layout: archive
-title: "Teaching"
+title: ""
 permalink: /teaching/
 author_profile: true
+show_excerpts: true
+classes: hide-title
 ---
 
 {% include base_path %}
 
-{% for post in site.teaching reversed %}
-  {% include archive-single.html %}
+{% assign courses = site.teaching | sort: "title" %}
+{% for post in courses %}
+  <article class="archive__item" itemscope itemtype="https://schema.org/Course">
+    <h2 class="archive__item-title no_toc">{{ post.title }}</h2>
+    {% if post.excerpt %}
+      <div class="archive__item-excerpt" itemprop="description">
+        {{ post.excerpt | markdownify }}
+      </div>
+    {% endif %}
+  </article>
 {% endfor %}
