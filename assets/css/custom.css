@@ -57,14 +57,14 @@ html[data-theme="dark"] .page__footer { border-top: 2px solid #BF5700 !important
 
 /* =========================
    4) Research titles (no underline anywhere)
-   Publications can still be clickable; see Section 7 for disabling in WP/WIP.
+   Publications can still be clickable; WP/WIP disabling below.
 ========================= */
 .archive__item-title a,
 .archive__item-title a:visited,
 .archive__item-title a:hover,
 .archive__item-title a:focus {
   text-decoration: none !important;
-  box-shadow: none !important;      /* Minimal Mistakes uses box-shadow for underline */
+  box-shadow: none !important;      /* Minimal Mistakes underline uses box-shadow */
   border-bottom: none !important;
   color: inherit;
 }
@@ -75,17 +75,17 @@ html[data-theme="dark"] .page__footer { border-top: 2px solid #BF5700 !important
 .page.hide-title .page__title { display: none; }
 
 /* =========================
-   6) Hide published date + icon on Research archive
+   6) Hide published date + icon ON ARCHIVE PAGES ONLY
 ========================= */
-.page__meta,
-.page__meta time,
-.page__meta .fas.fa-fw.fa-calendar-alt {
+.archive .page__meta,
+.archive .page__meta time,
+.archive .page__meta .fas.fa-fw.fa-calendar-alt {
   display: none !important;
 }
 
 /* =========================
    7) Make titles NON-CLICKABLE inside Working Papers & WIP
-   (wrapped with <div class="nolink-titles"> in research.md)
+   (we wrap those sections with <div class="nolink-titles">)
 ========================= */
 .nolink-titles .archive__item-title a {
   pointer-events: none;
@@ -94,49 +94,27 @@ html[data-theme="dark"] .page__footer { border-top: 2px solid #BF5700 !important
 
 /* =========================
    8) Normalize font size in Working Papers / WIP excerpts
-   (and keep consistent with main body text)
 ========================= */
 .archive__item .archive__item-excerpt,
 .archive__item .archive__item-excerpt p,
 .archive__item .archive__item-excerpt li {
-  font-size: 1rem !important;   /* same as body text */
-  line-height: 1.6;              /* comfortable reading */
-}
-
-/* tighten spacing between title and the first line under it */
-.archive__item-title + .archive__item-excerpt {
-  margin-top: 0.35rem;
+  font-size: 1rem !important;   /* match body text */
+  line-height: 1.6;
 }
 
 /* =========================
-   Remove gap under archive titles (e.g., Publications)
+   9) Remove gap under archive titles (ALL sections, incl. Publications)
+   Works whether excerpt is a <p> or a <div>
 ========================= */
-.archive__item-title { 
-  margin-bottom: 0 !important;          /* kill h2 bottom margin */
-}
-.archive__item-title + .archive__item-excerpt {
-  margin-top: 0 !important;             /* kill excerpt top margin */
-}
-.archive__item-title + .archive__item-excerpt p:first-child {
-  margin-top: 0 !important;             /* ensure first paragraph has no top margin */
-}
-
-
-
-
-/* =========================
-   Publications: remove gap under title
-   (archive-single.html outputs <p class="archive__item-excerpt">)
-========================= */
-.archive .archive__item-title { 
+.archive article .archive__item-title {
   margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }
-.archive .archive__item-title + p.archive__item-excerpt {
+.archive article .archive__item-title + * {
+  margin-top: 0 !important;          /* catch p.archive__item-excerpt or div.archive__item-excerpt */
+  padding-top: 0 !important;
+}
+/* extra safety for first paragraph inside excerpt containers */
+.archive article .archive__item-excerpt > p:first-child {
   margin-top: 0 !important;
 }
-/* safety for any nested structure */
-.archive p.archive__item-excerpt:first-child,
-.archive .archive__item-excerpt > p:first-child {
-  margin-top: 0 !important;
-}
-
