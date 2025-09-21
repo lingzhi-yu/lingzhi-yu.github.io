@@ -52,20 +52,16 @@ html[data-theme="dark"] .masthead .site-title a:visited {
    3) TOP & BOTTOM LINES
    Keep one burnt-orange line; remove the extra white one
 ========================= */
-/* your single line under the header */
 .masthead { border-bottom: 2px solid #BF5700 !important; }
 
-/* kill greedy-nav's extra line (box-shadow/border) */
 .greedy-nav {
   box-shadow: none !important;
   border-bottom: 0 !important;
   background-image: none !important;
 }
 
-/* footer line */
 .page__footer { border-top: 2px solid #BF5700 !important; }
 
-/* dark-mode: same rules */
 html[data-theme="dark"] .masthead { border-bottom: 2px solid #BF5700 !important; }
 html[data-theme="dark"] .greedy-nav {
   box-shadow: none !important;
@@ -76,15 +72,15 @@ html[data-theme="dark"] .page__footer { border-top: 2px solid #BF5700 !important
 
 /* =========================
    4) RESEARCH TITLES
-   Make archive/list titles plain, not links and remove underline
+   Make archive/list titles plain, not links and remove underline/shadow
 ========================= */
 .archive__item-title a {
   pointer-events: none;            /* disable clicking */
   text-decoration: none;           /* remove default underline */
-  box-shadow: none !important;     /* Minimal Mistakes adds link underline via box-shadow */
-  border-bottom: none !important;  /* belt-and-suspenders */
-  color: inherit;                  /* normal text color */
-  cursor: default;                 /* plain cursor */
+  box-shadow: none !important;     /* Minimal Mistakes link underline uses box-shadow */
+  border-bottom: none !important;
+  color: inherit;
+  cursor: default;
 }
 .archive__item-title a:hover,
 .archive__item-title a:focus {
