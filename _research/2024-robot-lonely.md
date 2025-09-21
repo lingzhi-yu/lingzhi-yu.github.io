@@ -7,7 +7,7 @@ date: 2024-05-01
 authors: "with Xiucheng Fan"
 venue: "Psychology & Marketing, 41(5), 1133–1151"
 header:
-  teaser: /images/Lonely-human.jpg   # <-- image shown on research page
+  teaser: /images/Lonely human.jpg   # <-- image shown on research page
 excerpt: >
   This work contributes to answering the question of when the lonely (vs. non-lonely) 
   would be more or less likely to bond with robotic companions to fulfill social needs. 
