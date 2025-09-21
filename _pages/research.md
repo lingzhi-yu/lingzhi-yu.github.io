@@ -1,10 +1,11 @@
 ---
-title: "Research"
+title: ""                         # remove big page header
 permalink: /research/
 layout: archive
 author_profile: true
-entries_layout: list
-show_excerpts: true
+entries_layout: list              # keep your list view
+show_excerpts: true               # needed to show the [paper] line
+classes: hide-title               # backup CSS to hide page title
 ---
 
 {% include base_path %}
