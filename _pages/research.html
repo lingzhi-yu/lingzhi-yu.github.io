@@ -1,13 +1,13 @@
 ---
 title: "Research"
 permalink: /research/
-layout: page
+layout: archive
 author_profile: true
 entries_layout: list
 show_excerpts: true
 ---
 
-{% include base_path %}   {# <<< THIS LINE ENABLES CORRECT CSS/ASSET PATHS #}
+{% include base_path %}
 
 <h2 id="publications">Publications</h2>
 {% assign pubs = site.research | where_exp: "item", "item.categories contains 'publications'" | sort: "date" | reverse %}
