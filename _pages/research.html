@@ -12,7 +12,7 @@ show_excerpts: true
 <h2 id="publications">Publications</h2>
 {% assign pubs = site.research | where_exp: "item", "item.categories contains 'publications'" | sort: "date" | reverse %}
 {% for post in pubs %}
-  {% include archive-single-no-title-link.html post=post %}
+  {% include archive-single.html %}
 {% endfor %}
 
 <hr>
@@ -20,7 +20,7 @@ show_excerpts: true
 <h2 id="working-papers">Working Papers</h2>
 {% assign wps = site.research | where_exp: "item", "item.categories contains 'working-papers'" | sort: "date" | reverse %}
 {% for post in wps %}
-  {% include archive-single-no-title-link.html post=post %}
+  {% include archive-single.html %}
 {% endfor %}
 
 <hr>
@@ -28,5 +28,5 @@ show_excerpts: true
 <h2 id="wip">Selected Work in Progress</h2>
 {% assign wip = site.research | where_exp: "item", "item.categories contains 'wip'" | sort: "date" | reverse %}
 {% for post in wip %}
-  {% include archive-single-no-title-link.html post=post %}
+  {% include archive-single.html %}
 {% endfor %}
