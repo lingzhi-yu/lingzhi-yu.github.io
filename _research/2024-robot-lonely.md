@@ -5,17 +5,16 @@ categories: [publications]
 date: 2024-05-01
 authors: "with Xiucheng Fan"
 venue: "Psychology & Marketing, 41(5), 1133–1151"
+# Point directly to /images/
 header:
-  teaser: /images/lonely-human.jpg
+  image: /images/lonely-human.jpg
 excerpt: |
   This work investigates how loneliness (human-side factor) and robot dominance (robot-side factor)
   shape people’s attitudes toward adopting companion robots. Across six studies, we show that
   greater loneliness generally lowers adoption attitudes toward robotic companionship, yet lonelier
   individuals display a stronger inclination to bond with **submissive** (vs. dominant) robots.
-links:
-  - name: "[paper]"
-    url: https://doi.org/10.1002/mar.21975   # replace with your real DOI or PDF
 ---
+[paper](https://doi.org/10.1002/mar.21975)
 
 This work contributes to answering the question of when the lonely (vs. non-lonely) would be more or less likely
 to bond with robotic companions to fulfill social needs. We investigate the joint effect of users’ levels of
