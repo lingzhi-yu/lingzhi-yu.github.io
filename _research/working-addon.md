@@ -1,5 +1,5 @@
 ---
-title: "All add-on fees are not the same: consumers’ aversion to “opaque” fees<img width="1258" height="81" alt="image" src="https://github.com/user-attachments/assets/8ff064a2-34fa-4a7a-9756-cba86d4b4440" />"
+title: "All add-on fees are not the same: consumers’ aversion to “opaque” fees"
 collection: research
 categories: [working-papers]
 
