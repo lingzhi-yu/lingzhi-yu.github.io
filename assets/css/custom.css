@@ -73,3 +73,16 @@ html[data-theme="dark"] .greedy-nav {
   background-image: none !important;
 }
 html[data-theme="dark"] .page__footer { border-top: 2px solid #BF5700 !important; }
+
+
+/* =========================
+   4) RESEARCH TITLES
+   Make archive/list titles plain, not links
+========================= */
+.archive__item-title a {
+  pointer-events: none;   /* disable clicking */
+  text-decoration: none;  /* remove underline */
+  color: inherit;         /* inherit normal text color */
+  cursor: default;        /* plain cursor */
+}
+
