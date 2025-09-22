@@ -335,15 +335,29 @@
   })();
 </script>
 
-<!-- Open publication titles in a NEW TAB -->
+<!-- Open publication titles in a NEW TAB (robust: intercept click) -->
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    // Requires your Publications block in research.md to be wrapped in <div class="pubs-section"> ... </div>
-    document.querySelectorAll(".pubs-section .archive__item-title a").forEach(function (a) {
-      a.setAttribute("target", "_blank");
-      a.setAttribute("rel", "noopener");
-    });
-  });
+  (function () {
+    // 1) Set attributes if present at load
+    function setAttrs() {
+      document.querySelectorAll(".pubs-section .archive__item-title a").forEach(function (a) {
+        a.setAttribute("target", "_blank");
+        a.setAttribute("rel", "noopener");
+      });
+    }
+
+    // 2) Intercept clicks as a fallback (works even if target gets overridden)
+    function handleClick(e) {
+      var link = e.target && e.target.closest(".pubs-section .archive__item-title a");
+      if (!link) return;
+      e.preventDefault();
+      // open in a new tab reliably
+      window.open(link.href, "_blank", "noopener");
+    }
+
+    document.addEventListener("DOMContentLoaded", setAttrs);
+    document.addEventListener("click", handleClick, false);
+  })();
 </script>
 
         <div class="page__footer-copyright">
