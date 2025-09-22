@@ -42,8 +42,6 @@ Conference Presentations (*denotes presenter)
 * Yu, L.*, Zhao, T., & Fan, X. (October 2019) “Rational Gifts for Communal Recipients,
   Emotional for Exchange: How Relational Norms Influence Gift Choices.” Poster presented
   at the Association for Consumer Research (ACR) Conference, Atlanta, GA.
-* Yu, L., & Fan, X., “Quantity matters: how online social interaction affects loneliness
-  before and during COVID-19,” manuscript development in progress.
 
 Honors and Grants
 ======
