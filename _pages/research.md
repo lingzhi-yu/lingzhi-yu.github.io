@@ -1,5 +1,5 @@
 ---
-title: ""                         # hide big page header
+title: ""
 permalink: /research/
 layout: archive
 author_profile: true
@@ -11,10 +11,12 @@ classes: hide-title
 {% include base_path %}
 
 ## Publications
+<div class="pubs-section">
 {% assign pubs = site.research | where_exp: "item", "item.categories contains 'publications'" | sort: "date" | reverse %}
 {% for post in pubs %}
   {% include archive-single.html %}
 {% endfor %}
+</div>
 
 ---
 
