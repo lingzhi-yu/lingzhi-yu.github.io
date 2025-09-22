@@ -1,5 +1,5 @@
 ---
-title: "Giving Together, Choosing Practical: Group Gifting Increases Preference for Utilitarian over Hedonic Gifts"
+title: "Giving together, choosing practical: group gifting increases preference for utilitarian over hedonic gifts"
 collection: research
 categories: [wip]
 excerpt: |
