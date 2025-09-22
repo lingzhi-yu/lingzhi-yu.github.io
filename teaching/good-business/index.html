@@ -333,36 +333,47 @@
       <footer>
         <!-- start custom footer snippets -->
 
-<!-- Support for MatJax -->
+<!-- Support for MathJax -->
 <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script"></script>
 
 <!-- Support for Plotly -->
-<script defer src='https://cdnjs.cloudflare.com/ajax/libs/plotly.js/3.0.1/plotly.min.js'></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/3.0.1/plotly.min.js"></script>
 
 <!-- Support for Mermaid -->
 <script type="module">
-    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
-    mermaid.initialize({startOnLoad:true, theme:'default'});
-    await mermaid.run({querySelector:'code.language-mermaid'});
+  import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+  mermaid.initialize({ startOnLoad: true, theme: "default" });
+  await mermaid.run({ querySelector: "code.language-mermaid" });
 </script>
 
 <!-- end custom footer snippets -->
+
+<!-- Force light mode + hide toggle -->
 <script>
   (function () {
     try {
-      // force light mode forever
-      localStorage.setItem('theme', 'light');
-      localStorage.setItem('mmColorScheme', 'light');
-      document.documentElement.setAttribute('data-theme', 'light');
+      localStorage.setItem("theme", "light");
+      localStorage.setItem("mmColorScheme", "light");
+      document.documentElement.setAttribute("data-theme", "light");
 
-      // hide the toggle button if present
       var toggles = document.querySelectorAll(
-        '#theme-toggle,.theme-toggle,.dark-mode-toggle,.mode-toggle,.js-theme-toggle'
+        "#theme-toggle,.theme-toggle,.dark-mode-toggle,.mode-toggle,.js-theme-toggle"
       );
-      toggles.forEach(function (el) { el.style.display = 'none'; });
+      toggles.forEach(function (el) { el.style.display = "none"; });
     } catch (e) {}
   })();
+</script>
+
+<!-- Open publication titles in a NEW TAB -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Requires your Publications block in research.md to be wrapped in <div class="pubs-section"> ... </div>
+    document.querySelectorAll(".pubs-section .archive__item-title a").forEach(function (a) {
+      a.setAttribute("target", "_blank");
+      a.setAttribute("rel", "noopener");
+    });
+  });
 </script>
 
         <div class="page__footer-copyright">
