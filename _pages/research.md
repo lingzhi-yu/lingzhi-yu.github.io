@@ -19,10 +19,11 @@ classes: hide-title
 ---
 
 ## Working Papers
+<div class="wp-section">
 {% assign wps = site.research | where_exp: "item", "item.categories contains 'working-papers'" | sort: "date" | reverse %}
 {% for post in wps %}
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    <h2 class="archive__item-title no_toc">{{ post.title }}</h2>  <!-- plain text, NOT a link -->
+    <h2 class="archive__item-title no_toc">{{ post.title }}</h2>
     {% if post.excerpt %}
       <div class="archive__item-excerpt" itemprop="description">
         {{ post.excerpt | markdownify }}
@@ -30,14 +31,16 @@ classes: hide-title
     {% endif %}
   </article>
 {% endfor %}
+</div>
 
 ---
 
 ## Selected Work in Progress
+<div class="wip-section">
 {% assign wip = site.research | where_exp: "item", "item.categories contains 'wip'" | sort: "date" | reverse %}
 {% for post in wip %}
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    <h2 class="archive__item-title no_toc">{{ post.title }}</h2>  <!-- plain text, NOT a link -->
+    <h2 class="archive__item-title no_toc">{{ post.title }}</h2>
     {% if post.excerpt %}
       <div class="archive__item-excerpt" itemprop="description">
         {{ post.excerpt | markdownify }}
@@ -45,3 +48,4 @@ classes: hide-title
     {% endif %}
   </article>
 {% endfor %}
+</div>
