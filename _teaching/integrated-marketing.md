@@ -2,5 +2,5 @@
 title: "Integrated Marketing Communications"
 collection: teaching
 excerpt: |
-  with Prof. Wayne Hoyer, Spring 2025
+  Teaching Assistant to Prof. Wayne Hoyer, Spring 2025
 ---
