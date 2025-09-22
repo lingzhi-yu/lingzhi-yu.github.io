@@ -19,6 +19,7 @@ Education
   * Visiting Scholar, Marketing, Tippie College of Business, 2020
 * Xiamen University (China)
   * Bachelor of Economics, School of Economics, 2014
+
 Publications and Working Papers
 ======
 * Yu, L., & Fan, X. (2024), “Lonely human and dominant robot: Similarity versus
@@ -31,6 +32,7 @@ Publications and Working Papers
   development in progress.
 * Yu, L., & Fan, X., “Quantity matters: how online social interaction affects loneliness
   before and during COVID-19,” manuscript development in progress.
+
 Conference Presentations (*denotes presenter)
 ======
 * Ruan, B., Yu, L.*, & Hu, B. (March 2022) “The Happiness of Withholding Happiness.”
@@ -42,11 +44,13 @@ Conference Presentations (*denotes presenter)
   at the Association for Consumer Research (ACR) Conference, Atlanta, GA.
 * Yu, L., & Fan, X., “Quantity matters: how online social interaction affects loneliness
   before and during COVID-19,” manuscript development in progress.
+
 Honors and Grants
 ======
 * Outstanding Graduate Assistant, Fudan University, 2019
 * China National Scholarship for Graduates, Government of China, 2015
 * China National Scholarship for Undergraduates, Government of China, 2012
+
 Teaching and Advising
 ======
 * Teaching Assistant: McCombs School of Business, University of Texas at Austin
@@ -65,6 +69,7 @@ Internship Experiences
 ======
 * Assistant Data Analyst, Orient Securities, Shanghai, China, 2015.11-2016.02
 * Customer Service Assistant, ICBC, Zhejiang, China, 2013.07-2013.09
+
 Technical Skills
 ======
   STATA; SPSS; Qualtrics; Microsoft Office including Word, Excel, and PowerPoint
